@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jiankang.diary.mapper.SysUserMapper">
+  <resultMap id="BaseResultMap" type="com.jiankang.diary.model.SysUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="record_id" jdbcType="BIGINT" property="recordId" />
+    <id column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="phone_num" jdbcType="VARCHAR" property="phoneNum" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="third_party_own" jdbcType="TINYINT" property="thirdPartyOwn" />
+    <result column="third_party_id" jdbcType="VARCHAR" property="thirdPartyId" />
+    <result column="record_state" jdbcType="VARCHAR" property="recordState" />
+    <result column="record_last_operation" jdbcType="VARCHAR" property="recordLastOperation" />
+    <result column="record_update_user_uuid" jdbcType="VARCHAR" property="recordUpdateUserUuid" />
+    <result column="record_update_time" jdbcType="TIMESTAMP" property="recordUpdateTime" />
+    <result column="record_create_time" jdbcType="TIMESTAMP" property="recordCreateTime" />
+    <result column="record_create_user_uuid" jdbcType="VARCHAR" property="recordCreateUserUuid" />
+  </resultMap>
+</mapper>

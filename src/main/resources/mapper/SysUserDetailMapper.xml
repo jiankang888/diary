@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jiankang.diary.mapper.SysUserDetailMapper">
+  <resultMap id="BaseResultMap" type="com.jiankang.diary.model.SysUserDetail">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="record_id" jdbcType="BIGINT" property="recordId" />
+    <id column="sys_user_detail_uuid" jdbcType="BIGINT" property="sysUserDetailUuid" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="gender" jdbcType="TINYINT" property="gender" />
+    <result column="portrait" jdbcType="VARCHAR" property="portrait" />
+    <result column="area_id" jdbcType="BIGINT" property="areaId" />
+    <result column="record_state" jdbcType="VARCHAR" property="recordState" />
+    <result column="record_last_operation" jdbcType="VARCHAR" property="recordLastOperation" />
+    <result column="record_update_user_uuid" jdbcType="VARCHAR" property="recordUpdateUserUuid" />
+    <result column="record_update_time" jdbcType="TIMESTAMP" property="recordUpdateTime" />
+    <result column="record_create_time" jdbcType="TIMESTAMP" property="recordCreateTime" />
+    <result column="record_create_user_uuid" jdbcType="VARCHAR" property="recordCreateUserUuid" />
+  </resultMap>
+</mapper>
