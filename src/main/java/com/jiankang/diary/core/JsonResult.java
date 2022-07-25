@@ -6,23 +6,29 @@ public class JsonResult<T> implements Serializable {
 
     private String msg;
 
-    private String status;
+    private String code;
 
     private T data;
-
-    public JsonResult(String msg, String status, T data) {
-        this.msg = msg;
-        this.status = status;
-        this.data = data;
-    }
 
     public JsonResult() {
 
     }
 
+    public JsonResult(String msg, String status, T data) {
+        this.msg = msg;
+        this.code = status;
+        this.data = data;
+    }
+
+    public JsonResult(CommonCodeEnum commonCodeEnum, T data) {
+        this.msg = commonCodeEnum.getMsg();
+        this.code = commonCodeEnum.getCode();
+        this.data = data;
+    }
+
     public JsonResult success(T data){
         JsonResult jsonResult = new JsonResult();
-        jsonResult.setStatus(CommonCodeEnum.SUCCESS.getCode());
+        jsonResult.setCode(CommonCodeEnum.SUCCESS.getCode());
         jsonResult.setMsg(CommonCodeEnum.SUCCESS.getMsg());
         jsonResult.setData(data);
         return jsonResult;
@@ -30,7 +36,7 @@ public class JsonResult<T> implements Serializable {
 
     public JsonResult error(T data) {
         JsonResult jsonResult = new JsonResult();
-        jsonResult.setStatus(CommonCodeEnum.ERROR.getCode());
+        jsonResult.setCode(CommonCodeEnum.ERROR.getCode());
         jsonResult.setMsg(CommonCodeEnum.ERROR.getMsg());
         jsonResult.setData(data);
         return jsonResult;
@@ -44,12 +50,12 @@ public class JsonResult<T> implements Serializable {
         this.msg = msg;
     }
 
-    public String getStatus() {
-        return status;
+    public String getCode() {
+        return code;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public T getData() {

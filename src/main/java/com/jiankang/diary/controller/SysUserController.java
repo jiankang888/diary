@@ -2,6 +2,7 @@ package com.jiankang.diary.controller;
 import java.util.Date;
 import java.util.UUID;
 
+import com.github.pagehelper.PageHelper;
 import com.jiankang.diary.core.CommonCodeEnum;
 import com.jiankang.diary.core.JsonResult;
 import com.jiankang.diary.model.SysUser;
@@ -35,7 +36,7 @@ public class SysUserController {
         if (errors.hasErrors()) {
             ObjectError error = errors.getAllErrors().get(0);
             logger.debug(error.getCode());
-            jsonResult.setStatus(CommonCodeEnum.PARAM_ERROR.getCode());
+            jsonResult.setCode(CommonCodeEnum.PARAM_ERROR.getCode());
             jsonResult.setMsg(error.getDefaultMessage());
             return jsonResult;
         }
@@ -51,4 +52,9 @@ public class SysUserController {
         return jsonResult.success(null);
     }
 
+    @PostMapping("/selectAll")
+    public JsonResult selectAll(){
+        PageHelper.startPage(1,10);
+        return new JsonResult(CommonCodeEnum.SUCCESS,  sysUserService.selectAll());
+    }
 }
