@@ -6,7 +6,7 @@ stages:
 maven_job:
   stage: maven
   tags:
-    - default
+    - diary-default
   only:
     - master
   script:
@@ -15,7 +15,7 @@ maven_job:
 build_job:
   stage: build
   tags:
-    - default
+    - diary-default
   only:
     - master
   script:
@@ -24,7 +24,7 @@ build_job:
 deploy_job:
   stage: deploy
   tags:
-    - default
+    - diary-default
   only:
     - master
   script:
