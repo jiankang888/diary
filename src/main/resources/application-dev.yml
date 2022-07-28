@@ -1,14 +1,3 @@
-mybatis:
-    mapper-locations: classpath:mapper/*.xml
-    type-aliases-package: com.jiankang.diary.model
-
-logging:
-    level:
-        com.jiankang.diary.mapper.*: debug
-    config:
-        classpath:log/logback-spring.xml
-    file:
-        path: /usr/local/log
 spring:
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
@@ -36,11 +25,6 @@ spring:
         maxPoolPreparedStatementPerConnectionSize: 20
         useGlobalDataSourceStat: true
         connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
-    mvc:
-        converters:
-            preferred-json-mapper: gson
-    gson:
-        date-format: yyyy-MM-dd HH:mm:ss
     redis:
         host: 192.168.0.50
         port: 16379
