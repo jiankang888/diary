@@ -13,7 +13,7 @@ spring:
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         password: 123456
-        url: jdbc:mysql://192.168.0.50:13306/diary?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+        url: jdbc:mysql://114.231.1676.225:13306/diary?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
         username: root
         type: com.alibaba.druid.pool.DruidDataSource
         #自动往数据库建表
