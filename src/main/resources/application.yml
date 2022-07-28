@@ -1,0 +1,19 @@
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.jiankang.diary.model
+
+logging:
+    level:
+        com.jiankang.diary.mapper.*: debug
+    config:
+        classpath:log/logback-spring.xml
+    file:
+        path: /usr/local/log
+spring:
+    profiles:
+        active: dev
+    mvc:
+        converters:
+            preferred-json-mapper: gson
+        gson:
+            date-format: yyyy-MM-dd HH:mm:ss
